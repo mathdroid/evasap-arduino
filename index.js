@@ -5,12 +5,7 @@ var request = require('request');
 var stdout = 0;
 
 board.on("ready", function() {
-  // Create an Led on pin 13
-  var led = new five.Led(13);
-  // Blink every half second
-  // led.blink(1000);
   this.pinMode(0, five.Pin.ANALOG);
-  // this.clock.tick(25);
   this.analogRead(0, function(voltage) {
     // console.log(voltage);
     stdout = voltage;
